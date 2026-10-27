@@ -1,0 +1,93 @@
+// Brand colours are taken from the SyncMind reference and stay the same in light and dark themes.
+.syncmind-header {
+	--syncmind-header-bg: #131418;
+	--syncmind-header-text: #ffffff;
+	--syncmind-header-accent: #2979ff;
+	--syncmind-header-divider: #464646;
+
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	min-height: 48px;
+	padding: 6px 16px;
+	background-color: var(--syncmind-header-bg);
+	color: var(--syncmind-header-text);
+	font-size: clamp(0.8125rem, 3.6vw, 1rem);
+	font-weight: 700;
+	line-height: 1.2;
+	white-space: nowrap;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		min-height: 56px;
+		padding: 8px 24px;
+		gap: 16px;
+	}
+}
+
+.syncmind-header-brand {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-shrink: 0;
+}
+
+.syncmind-header-logo {
+	width: auto;
+	height: 32px;
+
+	@include media-breakpoint-up(md) {
+		height: 38px;
+	}
+}
+
+.syncmind-header-wordmark {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.syncmind-header-name {
+	font-size: 1.1em;
+	letter-spacing: -0.01em;
+}
+
+.syncmind-header-tagline {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 0.45em;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+
+	&::before,
+	&::after {
+		content: "";
+		flex: 1;
+		height: 1px;
+		background-color: var(--syncmind-header-accent);
+	}
+}
+
+.syncmind-header-accent {
+	color: var(--syncmind-header-accent);
+}
+
+.syncmind-header-divider {
+	align-self: stretch;
+	width: 1px;
+	margin: 2px 0;
+	background-color: var(--syncmind-header-divider);
+	flex-shrink: 0;
+}
+
+.syncmind-header-title {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+
+	span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
